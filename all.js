@@ -12,8 +12,6 @@
 const CONFIG = {
     // 請填入您的 GCP Client ID
     CLIENT_ID: '',
-    // 請填入您的 GCP API Key
-    API_KEY: '',
     // 請填入您的 Google Sheet ID
     SPREADSHEET_ID: '',
 
@@ -194,7 +192,6 @@ function initGapiClient() {
         gapi.load('client', async () => {
             try {
                 await gapi.client.init({
-                    apiKey: CONFIG.API_KEY,
                     discoveryDocs: [CONFIG.DISCOVERY_DOC],
                 });
                 gapiInited = true;
